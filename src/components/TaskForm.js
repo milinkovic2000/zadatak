@@ -12,7 +12,7 @@ const TaskForm = ({addTaskss}) => {
         
     }else{
         addTaskss({
-            id: 10, naziv, rok,opis,prioritet
+            id: (new Date).getTime(), naziv, rok,opis,prioritet
             })
         setNaziv('');  
         setRok('');  

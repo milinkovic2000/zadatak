@@ -7,27 +7,22 @@ import './myStyle.css';
 function App() {
 
     const[zadaci, setZadaci]= useState([])
+
     const addTask = zadatak => {
       setZadaci([...zadaci, zadatak])
     } 
 
-   /* const taskList = tasks.map(
-      task=>
-      <div className='list-div'>
-        <h4>Naziv: {task.naziv}</h4>
-        <div>Rok: {task.rok}</div>
-        <div>Opis: {task.opis}</div>
-        <div>prioritet: {task.prioritet}</div>
-        <button onClick={() => {}}>Izbrisi!</button>
-      </div>
-    )*/
 
+    const removeTask = zadatak => {
+      setZadaci(zadaci.filter(zadatakItem => zadatakItem.id !== zadatak.id))
+    }
+  
   return (
         <div className='app'>
             <h2>Dodaj Zadatak</h2>
           <TaskForm addTaskss = {addTask}/>
           {
-            zadaci.map(zadatak => <ListItem key={zadatak.id} item={zadatak}/>)
+            zadaci.map(zadatak => <ListItem key={zadatak.id} item={zadatak} deleteTaskk = {removeTask}/>)
           }
          
         </div>

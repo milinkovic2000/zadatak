@@ -1,6 +1,8 @@
 import React from 'react'
 
-export default function ListItem({item}) {
+export default function ListItem({item, deleteTaskk}) {
+  
+  const deleteTask = () => deleteTaskk(item)
 
   return (
     <div className='list-div'>
@@ -8,7 +10,7 @@ export default function ListItem({item}) {
         <div>Rok: {item.rok}</div>
         <div>Opis: {item.opis}</div>
         <div>prioritet: {item.prioritet}</div>
-        <button onClick={() => {}}>Izbrisi!</button>
+        <button onClick={deleteTask}>Izbrisi!</button>
     </div>    
   )
 }
