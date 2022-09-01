@@ -17,15 +17,15 @@ function App() {
     }
     
     
-    if(zadaci.length==0){
-
-    }
+    
+   
     
   return (
         <div className='app'>
           <TaskForm addTaskss = {addTask}/>
           {zadaci == 0 && <div className='empty-list'><h2>Vaša lista zadataka je trenutno prazna!</h2></div>}
           {zadaci !=0 && <div className='empty-list'><h2>Lista zadataka:</h2></div>}
+
           {zadaci.map(zadatak => <ListItem key={zadatak.id} item={zadatak} deleteTaskk = {removeTask} zadaci={zadaci}/>)}
         </div>
   );
