@@ -1,0 +1,100 @@
+.list-div{
+    border: 0.5px solid black;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    background-color: lightyellow;
+}
+
+.app{
+    justify-content: center;
+    align-items: center;
+}
+
+.end{
+    background-color: green;
+    color: white;
+}
+
+.zad{
+    background-color: lightblue;
+    border: 0.5px solid black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.task-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.1px solid black;
+    height: 300px;
+    width: 400px;
+    margin-top: 50px;
+    background-color: lightblue;
+    border-radius: 20px;
+    box-shadow: 2px 5px;
+}
+
+.input{
+    margin-top: 10px;
+}
+
+.add-btn{
+    margin-top: 10px;
+    background-color: lightyellow;
+}
+
+input, textarea, select {
+    background-color: lightyellow;
+  }
+  
+.zadaci{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+.btn-delete{
+    background-color:#FFCCCB ;
+    color: red;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.btn-task-done{
+    background-color: lightgreen;
+    color: green;
+    border-radius: 10px;
+}
+
+.ended{
+    color: green;
+}
+
+.empty-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}

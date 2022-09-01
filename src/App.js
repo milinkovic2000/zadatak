@@ -1,30 +1,32 @@
 import React, {useState} from 'react';
-import {Container} from 'react-bootstrap'
 import ListItem from './components/ListItem';
 import TaskForm from './components/TaskForm';
-import './myStyle.css';
+import './components/myStyle.css';
+import { ReactDOM } from 'react';
 
 function App() {
-
+   
     const[zadaci, setZadaci]= useState([])
 
     const addTask = zadatak => {
       setZadaci([...zadaci, zadatak])
     } 
 
-
     const removeTask = zadatak => {
       setZadaci(zadaci.filter(zadatakItem => zadatakItem.id !== zadatak.id))
     }
-  
+    
+    
+    if(zadaci.length==0){
+
+    }
+    
   return (
         <div className='app'>
-            <h2>Dodaj Zadatak</h2>
           <TaskForm addTaskss = {addTask}/>
-          {
-            zadaci.map(zadatak => <ListItem key={zadatak.id} item={zadatak} deleteTaskk = {removeTask}/>)
-          }
-         
+          {zadaci == 0 && <div className='empty-list'><h2>Vaša lista zadataka je trenutno prazna!</h2></div>}
+          {zadaci !=0 && <div className='empty-list'><h2>Lista zadataka:</h2></div>}
+          {zadaci.map(zadatak => <ListItem key={zadatak.id} item={zadatak} deleteTaskk = {removeTask} zadaci={zadaci}/>)}
         </div>
   );
 }
